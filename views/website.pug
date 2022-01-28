@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+html(lang="en")
+
+head
+  meta(charset="UTF-8")
+  meta(http-equiv="X-UA-Compatible" content="IE=edge")
+  meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  title Contact form
+  style
+      include ../static/style.css
+
+body
+    div(class="main_container")
+      div(class="registration_heading")
+        h1 Regestration form
+
+      div(class="main")
+        form(action="/" method="post")
+
+          div(id="name")
+            h2(class="name") Name
+
+            input(type="text" class="firstname" name="FirstName") 
+            br
+            label(class="firstlabel") First name
+
+            input(type="text" class="lastname" name="LastName")
+            label(class="lastlabel") Last name
+
+
+          h2(class="name") Company
+          input(type="text" class="company" name="Company")
+
+          h2(class="name") Email
+          input(type="email" class="email" name="Email")
+
+          h2(class="name") Phone
+          input(type="text" class="area_code" name="AreaCode")
+          label(class="area_code_label") Area Code
+          input(type="phone" class="Phone" name="PhoneNumber")
+          label(class="Phone_label") Phone Number
+
+          h2(class="name") Subject
+          select(class="option" name="Subject")
+            option(disabled="disabled" selected="selected") --Choose your subject--
+            option(value="Mathematics") Mathematics
+            option(value="Physics") Physics
+            option(value="Chemistry") Chemistry
+  
+         
+          h2(id="student") Are you beginners ?
+          label(class="radio1")
+            input(class="radio-one" type="radio" name="BeginnerOrNot" value="Yes")
+            span(class="checkmark") Yes
+
+          label(class="radio2")
+            input(class="radio-two" type="radio" name="BeginnerOrNot" value="No")
+            span(class="checkmark") No
+      
+          br
+
+          button(type="submit" id="submit") Register
+          button(type="reset" id="reset") Reset    
